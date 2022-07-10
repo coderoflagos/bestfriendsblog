@@ -8,35 +8,52 @@ import {
   Code,
   Grid,
   theme,
+  Flex,
+  Image,
+  useColorModeValue,
+  Avatar,
+  Tag,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
+        
+        <Text fontSize='6xl' fontWeight="extrabold" md="auto">Opemipo & Precious's Blog </Text>
+      
           <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+           
+          <Box
+      width="450px"
+      border="black"
+      borderRadius="10px"
+      color="whiteAlpha.500"
+      boxShadow='dark-lg' p='6' rounded='md' bg='white'
+    >
+      <Image
+        height="100px"
+        width="3500px"
+        src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+      />
+      <Text>Text value</Text>
+      <Avatar />
+      <Tag>Tag name</Tag>
+    </Box>
+
+
+    <ColorModeSwitcher justifySelf="flex-end" />
           </VStack>
-        </Grid>
+    
       </Box>
+      
     </ChakraProvider>
   );
 }
 
+
+   
 export default App;
